@@ -6,6 +6,26 @@
     <title>Bootstrap cards</title>
     <link rel="stylesheet" href="./bootstrap.min.css">
     <style>
+        .navbar-nav .nav-link.acctive {
+        color: #fff;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
+    section {
+        height: 100vh;
+        background-color: #eee7e7;
+        padding-top: 120px;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
         .card-img-overlay {
             background-color: rgba(0, 0,0,0.7);
         }
@@ -66,7 +86,77 @@
         </div>
     </div>
     </div>
-</div>   
+</div> 
+
+<header id="cabecalho">
+    <div class="navbar navbar-expand-1g">
+        <div class="container">
+        <h1>Titulo do site</h1>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="collapse navbar-collapse justify-content-end" id="menu">
+            <ul class="nav navbar-nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#Inicio">Inicio </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Produtos">Produtos </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Promoções">Promoções </a>
+                </li>
+                <li >
+                    <a class="nav-link" href="#contato">contato </a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+</header>
+<div data-bs-spy="scroll" data-bs-target="#cabecalho">
+<section id="Inicio">
+    <h2>Inicio</h2>
+</section>
+<section id="Produtos">
+    <h2>Produtos</h2>
+    <div class="container">
+        <nav class="nav nav-pills">
+            <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link" type="button"> Eletronicos</button>
+            <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button"> Moda masculina</button>
+            <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button"> Moda feminina</button>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane active" id="aba1">
+                Conteaudo da aba Eletronicos
+            </div>
+            <div class="tab-pane " id="aba2">
+                Conteaudo da aba Moda masculina
+            </div>
+            <div class="tab-pane " id="aba3">
+                Conteaudo da aba Moda feminina
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Promoções">
+    <h2>Promoções</h2>
+</section>
+<section id="contato">
+    <h2>contato</h2>
+</section>
+</div>
+
+<div class="toast-container">
+    <div class="toast">
+        <header class="toast-header">
+            <strong>Importante</strong>
+        </header>
+        <div class="toast-body">
+            Voce possui 10 msgs não lidas
+        </div>
+    </div>
+</div>
     <script src="./bootstrap.JS"></script>
 </body>
 </html>
