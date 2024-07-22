@@ -116,6 +116,7 @@
                 </li>
             </ul>
         </nav>
+        <button id="btn-checar-emails" type="button" class="btn btn-warning">checar caixa de msg</button>
         </div>
     </div>
 </header>
@@ -152,8 +153,8 @@
 </section>
 </div>
 
-<div class="toast-container">
-    <div class="toast">
+<div class="toast-container position-fixes bottom-0">
+    <div class="toast" id="mensagens-alerta">
         <header class="toast-header">
             <strong>Importante</strong>
         </header>
@@ -162,6 +163,16 @@
         </div>
     </div>
 </div>
-    <script src="./bootstrap.JS"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>
+        const ativadorToast = document.getElementById('btn-checar-emails')
+        const mensagem = document.getElementyById('mensagem-alerta')
+        if(ativadorToast) {
+            ativadorToast.addEventListener('click', function(){
+                const toast = new bootstrap.toast(mensagem)
+                toast.show()
+            })
+        }
+    </script>
 </body>
 </html>
